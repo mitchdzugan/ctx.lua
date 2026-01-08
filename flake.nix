@@ -11,30 +11,22 @@
     flake-utils,
     ...
   }:
-    flake-utils.lib.eachDefaultSystem (
+    let mkPkg = luaPkgs: luaPkgs.buildLuarocksPackage rec {
+      pname = "ctx";
+      version = "0.0.1-0";
+      src = ./.;
+      knownRockspec = ./rockspecs/${pname}-${version}.rockspec;
+      disabled = (luaPkgs.luaOlder "5.1") || (luaPkgs.luaAtLeast "5.4");
+      buildInputs = [ luaPkgs.lua luaPkgs.luarocks ];
+      propagatedBuildInputs = [ luaPkgs.lua luaPkgs.luarocks ];
+    }; in { mkPkg = mkPkg; } // flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
-        lib = pkgs.lib;
         luaPkgs = pkgs.lua5_1.pkgs;
         nativeBuildInputs = with pkgs; [];
         buildInputs = with pkgs; [];
       in {
-        packages.default = luaPkgs.buildLuarocksPackage {
-          pname = "ctx";
-          version = "0.0.1-0";
-
-          src = ./.;
-          knownRockspec = ./rockspecs/ctx-0.0.1-0.rockspec;
-          disabled = (luaPkgs.luaOlder "5.1") || (luaPkgs.luaAtLeast "5.4");
-          propagatedBuildInputs = [ luaPkgs.bit32 luaPkgs.lua luaPkgs.std-normalize ];
-
-          meta = with lib; {
-            homepage = "https://github.com/luaposix/luaposix/";
-            description = "Lua bindings for POSIX";
-            maintainers = with maintainers; [ vyp lblasc ];
-            license.fullName = "MIT/X11";
-          };
-        };
+        packages.default = mkPkg pkgs.lua5_1.pkgs;
         devShells.default = pkgs.mkShell {inherit nativeBuildInputs buildInputs;};
       }
     );
