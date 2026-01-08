@@ -17,8 +17,6 @@
       src = ./.;
       knownRockspec = ./rockspecs/${pname}-${version}.rockspec;
       disabled = (luaPkgs.luaOlder "5.1") || (luaPkgs.luaAtLeast "5.4");
-      buildInputs = [ luaPkgs.lua luaPkgs.luarocks ];
-      propagatedBuildInputs = [ luaPkgs.lua luaPkgs.luarocks ];
     }; in { mkPkg = mkPkg; } // flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = nixpkgs.legacyPackages.${system};
