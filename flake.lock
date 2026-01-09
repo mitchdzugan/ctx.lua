@@ -24,14 +24,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1767948914,
-        "narHash": "sha256-PIdfjp62F3/Q/V2xqrrGEKhEUpZPpf8xoi19sSi9xNE=",
-        "path": "/home/dz/Projects/mitch-utils.nix",
-        "type": "path"
+        "lastModified": 1767970899,
+        "narHash": "sha256-eJrnnsp7SNc339DCIoiCR1bzEAxVHs0EsvAmYn7ZuUU=",
+        "owner": "mitchdzugan",
+        "repo": "mitch-utils.nix",
+        "rev": "d3cd4e61f2ad5b303bf5b3108fd991becba3e478",
+        "type": "github"
       },
       "original": {
-        "path": "/home/dz/Projects/mitch-utils.nix",
-        "type": "path"
+        "owner": "mitchdzugan",
+        "repo": "mitch-utils.nix",
+        "type": "github"
       }
     },
     "nixpkgs": {

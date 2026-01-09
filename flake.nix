@@ -1,8 +1,8 @@
 {
   description = "coroutine powered reader monad";
   inputs = {
-    # mitch-utils.url = "github:mitchdzugan/mitch-utils.nix";
-    mitch-utils.url = "path:/home/dz/Projects/mitch-utils.nix";
+    mitch-utils.url = "github:mitchdzugan/mitch-utils.nix";
+    # mitch-utils.url = "path:/home/dz/Projects/mitch-utils.nix";
   };
   outputs = ({ mitch-utils, ... }:
     let
