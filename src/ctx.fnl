@@ -15,10 +15,10 @@
 (fn with [t f]
   (let [prevs {}]
     (each [k v (pairs t)]
-      (tset prevs k (. (_) k))
+      (tset prevs k [(. (_) k)])
       (tset (_) k v))
     (let [res (f)]
-      (each [k v (pairs prevs)] (tset (_) k v))
+      (each [k [v] (pairs prevs)] (tset (_) k v))
       res)))
 
 {: exec
