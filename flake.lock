@@ -18,6 +18,25 @@
         "type": "github"
       }
     },
+    "mitch-utils": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1767921552,
+        "narHash": "sha256-0XcdLfKuwDG7razOeaJTWt74cJiUlDNpbmbwPuQY9U4=",
+        "owner": "mitchdzugan",
+        "repo": "mitch-utils.nix",
+        "rev": "b1cb16c199ac6f53fd82bbcab6d937563425a85b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mitchdzugan",
+        "repo": "mitch-utils.nix",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1767767207,
@@ -36,8 +55,7 @@
     },
     "root": {
       "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "mitch-utils": "mitch-utils"
       }
     },
     "systems": {
