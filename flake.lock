@@ -41,11 +41,11 @@
         "mitch-utils": "mitch-utils"
       },
       "locked": {
-        "lastModified": 1768023994,
-        "narHash": "sha256-CJ+2FB7PZ8VUiWA8dpmm+/n2LujmDzhoWeuBgbNqpYw=",
+        "lastModified": 1768078338,
+        "narHash": "sha256-YsrMqfdGf5Xe52uKC1fMKBTYAK6ZRHEM6Pp7HUKJcdQ=",
         "owner": "mitchdzugan",
         "repo": "__.lua",
-        "rev": "cc2ca98fd33b4d2763cc127fca4b06516f0bcce7",
+        "rev": "df693ab84b8b0cd33108531cd57063957c5e982e",
         "type": "github"
       },
       "original": {
@@ -60,11 +60,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1768000672,
-        "narHash": "sha256-PibOzfShCxQKPrQN420dMH0dKtnyO2tGfNJhuGaiDss=",
+        "lastModified": 1768077560,
+        "narHash": "sha256-p4E+vlOn525f8O8WsqoHVNwXPLyDmTie4G83+Y2smdc=",
         "owner": "mitchdzugan",
         "repo": "mitch-utils.nix",
-        "rev": "9abcd2ed03d6b3841b75f33cb3b3f8bc80c0e219",
+        "rev": "4ca8b0321d389d71c99e4b36e997885b6bbd44b6",
         "type": "github"
       },
       "original": {
@@ -79,11 +79,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1768000672,
-        "narHash": "sha256-PibOzfShCxQKPrQN420dMH0dKtnyO2tGfNJhuGaiDss=",
+        "lastModified": 1768077560,
+        "narHash": "sha256-p4E+vlOn525f8O8WsqoHVNwXPLyDmTie4G83+Y2smdc=",
         "owner": "mitchdzugan",
         "repo": "mitch-utils.nix",
-        "rev": "9abcd2ed03d6b3841b75f33cb3b3f8bc80c0e219",
+        "rev": "4ca8b0321d389d71c99e4b36e997885b6bbd44b6",
         "type": "github"
       },
       "original": {
