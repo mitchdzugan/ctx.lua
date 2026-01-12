@@ -6,11 +6,7 @@
     mitch-utils.url = "github:mitchdzugan/mitch-utils.nix";
     # mitch-utils.url = "path:/VOID/proj/mitch-utils.nix";
   };
-  outputs = ({ mitch-utils, lua-__, ... }:
-    let
-      mkLuaDeps = luaPkgs: with luaPkgs; [
-        (lua-__.mkPkg luaPkgs)
-      ];
-    in (mitch-utils.mkZnFnl "ctx" "0.0.1-0" mkLuaDeps ./.)
+  outputs = (inputs@{ mitch-utils, ... }:
+    (mitch-utils.mkZnFnl inputs ./.)
   );
 }
